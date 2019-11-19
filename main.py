@@ -29,7 +29,7 @@ def extract_data(page: requests.Response, column_cnpj: str = '') -> list:
     )
 
 if __name__ == "__main__":
-    URI = lambda cnpj: f'http://www.portaltransparencia.gov.br/contratos/8376731/pessoa-juridica/{cnpj}'
+    URI = lambda cnpj: f'http://www.portaltransparencia.gov.br/busca/pessoa-juridica/{cnpj}'
 
     files_paths: List[str] = glob.glob("./csv/*/*.csv")
     out: str = args.out if args.out else "out.csv"
